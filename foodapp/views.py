@@ -71,7 +71,6 @@ class UpdateUserAPIView(APIView):
 
 
 class CreateRestaurantAndMenuItems(APIView):
-    import pdb; pdb.set_trace()
     authentication_classes = [JWTAuthentication]
     permission_classes = [CustomPermission]
 

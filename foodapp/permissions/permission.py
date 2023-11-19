@@ -3,12 +3,10 @@ from rest_framework import permissions
 
 class CustomPermission(permissions.BasePermission):
     def has_permission(self, request, view):
-        import pdb; pdb.set_trace()
         # Allow access to authenticated users
         return request.user.is_authenticated
 
     def has_object_permission(self, request, view, obj):
-        import pdb; pdb.set_trace()
 
         # Check object-level permission here
         if request.user.is_authenticated:
